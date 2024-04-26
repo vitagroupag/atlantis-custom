@@ -9,7 +9,7 @@ jobs:
             - name: Build an push the image
               run: |
                 echo "${{ secrets.GHA_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
-                IMAGE_NAME=ghcr.io/${{ github.repository }}
-                IMAGE_TAG=0.27.3-${{ github.run_number }}
+                export IMAGE_NAME=ghcr.io/${{ github.repository }}
+                export IMAGE_TAG=0.27.3-${{ github.run_number }}
                 ./customize.sh
                 docker push $IMAGE_NAME:$IMAGE_TAG
