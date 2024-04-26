@@ -1,0 +1,15 @@
+name: Build Atlantis custom image
+on: push
+
+jobs:
+    build_and_publish:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Build an push the image
+              run: |
+                echo "${{ secrets.GHA_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+                IMAGE_NAME=ghcr.io/${{ github.repository }}
+                IMAGE_TAG=0.27.3-${{ github.run_number }}
+                ./customize.sh
+                docker push $IMAGE_NAME:$IMAGE_TAG
