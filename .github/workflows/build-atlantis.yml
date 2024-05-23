@@ -10,8 +10,8 @@ jobs:
               run: |
                 echo "${{ secrets.GHA_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
                 export IMAGE_NAME=ghcr.io/${{ github.repository }}
-                export TG_VERSION=0.57.9
-                export ATLANTIS_VERSION=0.27.3
+                export TG_VERSION=0.58.9
+                export ATLANTIS_VERSION=0.28.0
                 export IMAGE_TAG=$ATLANTIS_VERSION-${{ github.run_number }}
                 ./customize.sh
                 docker push $IMAGE_NAME:$IMAGE_TAG
