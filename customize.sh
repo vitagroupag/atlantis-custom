@@ -1,11 +1,11 @@
 #!/bin/bash
 
-ATLANTIS_VERSION="${ATLANTIS_VERSION:-0.28.5}"
-TG_VERSION="${TG_VERSION:-0.63.3}"
+ATLANTIS_VERSION="${ATLANTIS_VERSION:-0.27.3}"
+TG_VERSION="${TG_VERSION:-0.57.9}"
 TG_DOWNLOAD_LINK="https://github.com/gruntwork-io/terragrunt/releases/download/v${TG_VERSION}/terragrunt_linux_amd64"
 
 IMAGE_NAME="${IMAGE_NAME:-ghcr.io/vitagroupag/atlantis-custom}"
-IMAGE_TAG="0.28.5"
+IMAGE_TAG="${IMAGE_TAG:-latest}"
 
 TARGET_FILE="terragrunt"
 
@@ -25,6 +25,6 @@ cat Dockerfile
 echo "Name: $IMAGE_NAME"
 echo "Tag: $IMAGE_TAG"
 
-docker build -t $IMAGE_NAME:$IMAGE_TAG -t $IMAGE_NAME:latest .
+docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
 echo "Build custom atlantis image : $IMAGE_TAG"
