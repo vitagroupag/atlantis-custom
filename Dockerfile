@@ -14,4 +14,4 @@ RUN chmod 755 /usr/local/bin/kubectl
 
 # install AWS CLI
 RUN apk update
-RUN apk install aws-cli
+RUN apk add aws-cli
