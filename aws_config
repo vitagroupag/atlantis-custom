@@ -1,0 +1,24 @@
+[profile infra]
+role_arn = arn:aws:iam::339712709702:role/deploy-app-execution-role
+credential_source=Ec2InstanceMetadata
+region = eu-central-1
+output = json
+
+[profile pen-dev]
+role_arn = arn:aws:iam::339713025328:role/deploy-app-execution-role
+credential_source=Ec2InstanceMetadata
+region = eu-central-1
+output = json
+
+[profile infralab]
+role_arn = arn:aws:iam::311141563338:role/deploy-app-execution-role
+credential_source=Ec2InstanceMetadata
+region = eu-central-1
+output = json
+
+
+[profile itos-prod]
+role_arn = arn:aws:iam::717279696671:role/deploy-app-execution-role
+credential_source=Ec2InstanceMetadata
+region = eu-central-1
+output = json
