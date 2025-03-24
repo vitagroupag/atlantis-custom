@@ -8,7 +8,7 @@ jobs:
           IMAGE_NAME: ghcr.io/${{ github.repository }}
           TG_VERSION: 0.73.6
           ATLANTIS_VERSION: 0.33.0
-          IMAGE_TAG: $ATLANTIS_VERSION-${{ github.run_number }}
+          IMAGE_TAG: ${{ env.ATLANTIS_VERSION }}-${{ github.run_number }}
         steps:
             - uses: actions/checkout@v3
             - name: Build an push the image
