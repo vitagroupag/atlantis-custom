@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ATLANTIS_VERSION="${ATLANTIS_VERSION:-0.33.0}"
-TG_VERSION="${TG_VERSION:-0.73.6}"
+TG_VERSION="${TG_VERSION:-0.75.10}"
 TG_DOWNLOAD_LINK="https://github.com/gruntwork-io/terragrunt/releases/download/v${TG_VERSION}/terragrunt_linux_amd64"
 KC_DOWNLOAD_LINK="https://dl.k8s.io/release/v1.31.0/bin/linux/amd64/kubectl"
 
