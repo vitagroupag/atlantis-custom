@@ -16,9 +16,14 @@ credential_source=Ec2InstanceMetadata
 region = eu-central-1
 output = json
 
-
 [profile itos-prod]
 role_arn = arn:aws:iam::717279696671:role/deploy-app-execution-role
+credential_source=Ec2InstanceMetadata
+region = eu-central-1
+output = json
+
+[profile cs]
+role_arn = arn:aws:iam::654654627453:role/deploy-app-execution-role
 credential_source=Ec2InstanceMetadata
 region = eu-central-1
 output = json
